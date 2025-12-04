@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoir 技术支持 | Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo h1 {
+            font-size: 28px;
+            color: #8B5CF6;
+            margin-bottom: 8px;
+        }
+        .logo p {
+            color: #666;
+            font-size: 14px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-switch a.active {
+            background: #8B5CF6;
+            color: #fff;
+        }
+        .lang-switch a:not(.active) {
+            background: #f0f0f0;
+            color: #666;
+        }
+        .lang-switch a:hover:not(.active) {
+            background: #e0e0e0;
+        }
+        h2 {
+            font-size: 20px;
+            color: #8B5CF6;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 16px;
+            color: #444;
+            margin: 20px 0 10px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #f8f5ff;
+            border-left: 4px solid #8B5CF6;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 13px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact-box h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .contact-box a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .faq-item h4 {
+            color: #8B5CF6;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            margin-bottom: 0;
+            color: #555;
+            font-size: 14px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: #f8f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature-item .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .feature-item p {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .card {
+                padding: 25px;
+            }
+            .logo h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <h1>📔 Memoir</h1>
+                <p>技术支持 | Support</p>
+            </div>
+
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="switchLang('zh'); return false;">中文</a>
+                <a href="#" onclick="switchLang('en'); return false;">English</a>
+            </div>
+
+            <!-- 中文版本 -->
+            <div id="zh" class="section active">
+                <div class="highlight">
+                    <strong>Memoir</strong> 是一款简洁优雅的日记应用，帮助你用文字、语音和照片记录生活中的每一个珍贵时刻。
+                </div>
+
+                <h2>主要功能</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon">✍️</div>
+                        <h4>文字日记</h4>
+                        <p>随时记录心情与想法</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🎙️</div>
+                        <h4>语音日记</h4>
+                        <p>支持录音与语音转文字</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">📷</div>
+                        <h4>照片记录</h4>
+                        <p>添加多张照片到日记</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🤖</div>
+                        <h4>AI 总结</h4>
+                        <p>智能生成日记摘要</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">📅</div>
+                        <h4>日历视图</h4>
+                        <p>按日期浏览日记</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔒</div>
+                        <h4>隐私保护</h4>
+                        <p>Face ID / Touch ID 锁定</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">☁️</div>
+                        <h4>iCloud 同步</h4>
+                        <p>多设备数据同步</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔍</div>
+                        <h4>全文搜索</h4>
+                        <p>快速查找日记内容</p>
+                    </div>
+                </div>
+
+                <h2>常见问题</h2>
+
+                <div class="faq-item">
+                    <h4>Q: 我的日记数据存储在哪里？</h4>
+                    <p>A: 您的日记数据主要存储在设备本地。如果您开启了 iCloud，数据会通过 Apple iCloud 服务加密同步到云端，并在您的多台设备间保持一致。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 如何恢复误删的日记？</h4>
+                    <p>A: 目前删除的日记无法直接恢复。建议定期通过设置页面的"导出数据"功能备份您的日记。如果您开启了 iCloud，可以尝试从 iCloud 备份恢复。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 语音转文字功能需要联网吗？</h4>
+                    <p>A: 语音转文字使用 Apple 系统的 Speech 框架，支持离线识别。首次使用某种语言时可能需要下载语言包。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: AI 总结功能是如何工作的？</h4>
+                    <p>A: 保存日记后，系统会自动将您的文字内容发送到 AI 服务生成简短摘要。AI 总结仅处理文字内容，不会上传您的照片。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 如何开启应用锁定？</h4>
+                    <p>A: 进入设置页面，找到"应用锁定"选项并开启。支持 Face ID、Touch ID 或设备密码验证。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 没有 iCloud 账号可以使用吗？</h4>
+                    <p>A: 可以。没有 iCloud 账号时，数据会存储在本地，应用的所有功能都可以正常使用，只是无法在多设备间同步。</p>
+                </div>
+
+                <h2>联系我们</h2>
+                <p>如果您在使用过程中遇到任何问题，或有功能建议，欢迎通过以下方式联系我们：</p>
+
+                <div class="contact-box">
+                    <h3>📧 技术支持邮箱</h3>
+                    <a href="mailto:sutgouc@gmail.com">sutgouc@gmail.com</a>
+                </div>
+
+                <p>我们通常会在 1-2 个工作日内回复您的邮件。发送邮件时，请尽量提供以下信息以便我们更快地帮助您：</p>
+                <ul>
+                    <li>您的设备型号和 iOS 版本</li>
+                    <li>Memoir 应用版本</li>
+                    <li>问题的详细描述</li>
+                    <li>相关截图（如有）</li>
+                </ul>
+            </div>
+
+            <!-- English Version -->
+            <div id="en" class="section">
+                <div class="highlight">
+                    <strong>Memoir</strong> is an elegant journaling app that helps you capture every precious moment with text, voice, and photos.
+                </div>
+
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon">✍️</div>
+                        <h4>Text Journal</h4>
+                        <p>Record thoughts anytime</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🎙️</div>
+                        <h4>Voice Journal</h4>
+                        <p>Recording & speech-to-text</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">📷</div>
+                        <h4>Photo Entries</h4>
+                        <p>Add multiple photos</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🤖</div>
+                        <h4>AI Summary</h4>
+                        <p>Smart journal summaries</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">📅</div>
+                        <h4>Calendar View</h4>
+                        <p>Browse by date</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔒</div>
+                        <h4>Privacy Lock</h4>
+                        <p>Face ID / Touch ID</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">☁️</div>
+                        <h4>iCloud Sync</h4>
+                        <p>Multi-device sync</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔍</div>
+                        <h4>Full-Text Search</h4>
+                        <p>Find entries quickly</p>
+                    </div>
+                </div>
+
+                <h2>FAQ</h2>
+
+                <div class="faq-item">
+                    <h4>Q: Where is my journal data stored?</h4>
+                    <p>A: Your journal data is primarily stored locally on your device. If you enable iCloud, data will be encrypted and synced through Apple's iCloud service across all your devices.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: How can I recover deleted entries?</h4>
+                    <p>A: Currently, deleted entries cannot be directly recovered. We recommend regularly backing up your journals using the "Export Data" feature in Settings. If you have iCloud enabled, you may try restoring from an iCloud backup.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: Does speech-to-text require internet?</h4>
+                    <p>A: Speech-to-text uses Apple's Speech framework and supports offline recognition. You may need to download a language pack when using a language for the first time.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: How does AI Summary work?</h4>
+                    <p>A: After saving an entry, the system automatically sends your text content to an AI service to generate a brief summary. Only text content is processed; your photos are never uploaded.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: How do I enable App Lock?</h4>
+                    <p>A: Go to Settings, find "App Lock" and enable it. The app supports Face ID, Touch ID, or device passcode authentication.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: Can I use the app without an iCloud account?</h4>
+                    <p>A: Yes. Without an iCloud account, data is stored locally and all features work normally. You just won't have multi-device sync.</p>
+                </div>
+
+                <h2>Contact Us</h2>
+                <p>If you encounter any issues or have feature suggestions, please feel free to contact us:</p>
+
+                <div class="contact-box">
+                    <h3>📧 Support Email</h3>
+                    <a href="mailto:sutgouc@gmail.com">sutgouc@gmail.com</a>
+                </div>
+
+                <p>We typically respond within 1-2 business days. When sending an email, please include the following information to help us assist you faster:</p>
+                <ul>
+                    <li>Your device model and iOS version</li>
+                    <li>Memoir app version</li>
+                    <li>Detailed description of the issue</li>
+                    <li>Screenshots (if applicable)</li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <p>© 2024 Memoir. All rights reserved.</p>
+                <p>Made with ❤️ for journaling lovers</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById(lang).classList.add('active');
+
+            document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Auto-detect language
+        (function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang && !userLang.startsWith('zh')) {
+                switchLang('en');
+            }
+        })();
+    </script>
+</body>
+</html>
