@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoir - 记录生活中的每一个珍贵时刻</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .logo h1 {
+            font-size: 36px;
+            color: #8B5CF6;
+            margin-bottom: 10px;
+        }
+        .logo .tagline {
+            color: #666;
+            font-size: 16px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-switch a.active {
+            background: #8B5CF6;
+            color: #fff;
+        }
+        .lang-switch a:not(.active) {
+            background: #f0f0f0;
+            color: #666;
+        }
+        .lang-switch a:hover:not(.active) {
+            background: #e0e0e0;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .intro p {
+            color: #555;
+            font-size: 17px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .feature {
+            background: #f8f5ff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feature .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .feature span {
+            font-size: 13px;
+            color: #555;
+        }
+        .download-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #8B5CF6;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 12px 25px;
+            border: 2px solid #8B5CF6;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .links a:hover {
+            background: #8B5CF6;
+            color: #fff;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .card {
+                padding: 35px 25px;
+            }
+            .logo .icon {
+                font-size: 60px;
+            }
+            .logo h1 {
+                font-size: 28px;
+            }
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .links a {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <div class="icon">📔</div>
+                <h1>Memoir</h1>
+                <p class="tagline" id="tagline-zh">记录生活中的每一个珍贵时刻</p>
+                <p class="tagline" id="tagline-en" style="display: none;">Capture every precious moment in life</p>
+            </div>
+
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="switchLang('zh'); return false;">中文</a>
+                <a href="#" onclick="switchLang('en'); return false;">English</a>
+            </div>
+
+            <!-- 中文版本 -->
+            <div id="zh" class="section active">
+                <div class="intro">
+                    <p>Memoir 是一款简洁优雅的日记应用，帮助你用文字、语音和照片记录生活中的点点滴滴。</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <div class="icon">✍️</div>
+                        <span>文字日记</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🎙️</div>
+                        <span>语音记录</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">📷</div>
+                        <span>照片记忆</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🤖</div>
+                        <span>AI 总结</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">☁️</div>
+                        <span>iCloud 同步</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🔒</div>
+                        <span>隐私保护</span>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <a href="https://apps.apple.com/app/memoir" class="download-btn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        App Store 下载
+                    </a>
+                </div>
+
+                <div class="links">
+                    <a href="support.html">
+                        <span>💬</span>
+                        技术支持
+                    </a>
+                    <a href="privacy.html">
+                        <span>🔐</span>
+                        隐私政策
+                    </a>
+                </div>
+            </div>
+
+            <!-- English Version -->
+            <div id="en" class="section">
+                <div class="intro">
+                    <p>Memoir is an elegant journaling app that helps you capture life's moments with text, voice, and photos.</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <div class="icon">✍️</div>
+                        <span>Text Journal</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🎙️</div>
+                        <span>Voice Recording</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">📷</div>
+                        <span>Photo Memories</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🤖</div>
+                        <span>AI Summary</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">☁️</div>
+                        <span>iCloud Sync</span>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">🔒</div>
+                        <span>Privacy Lock</span>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <a href="https://apps.apple.com/app/memoir" class="download-btn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        Download on App Store
+                    </a>
+                </div>
+
+                <div class="links">
+                    <a href="support.html">
+                        <span>💬</span>
+                        Support
+                    </a>
+                    <a href="privacy.html">
+                        <span>🔐</span>
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>© 2024 Memoir. All rights reserved.</p>
+                <p>Made with ❤️ for journaling lovers</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById(lang).classList.add('active');
+
+            document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Switch tagline
+            document.getElementById('tagline-zh').style.display = lang === 'zh' ? 'block' : 'none';
+            document.getElementById('tagline-en').style.display = lang === 'en' ? 'block' : 'none';
+        }
+
+        // Auto-detect language
+        (function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang && !userLang.startsWith('zh')) {
+                switchLang('en');
+            }
+        })();
+    </script>
+</body>
+</html>
