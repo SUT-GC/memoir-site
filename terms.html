@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoir 服务条款 | Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo h1 {
+            font-size: 28px;
+            color: #8B5CF6;
+            margin-bottom: 8px;
+        }
+        .logo p {
+            color: #666;
+            font-size: 14px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-switch a.active {
+            background: #8B5CF6;
+            color: #fff;
+        }
+        .lang-switch a:not(.active) {
+            background: #f0f0f0;
+            color: #666;
+        }
+        .lang-switch a:hover:not(.active) {
+            background: #e0e0e0;
+        }
+        h2 {
+            font-size: 20px;
+            color: #8B5CF6;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 16px;
+            color: #444;
+            margin: 20px 0 10px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #f8f5ff;
+            border-left: 4px solid #8B5CF6;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 13px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .contact-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .price-table th,
+        .price-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .price-table th {
+            background: #f8f5ff;
+            color: #8B5CF6;
+            font-weight: 600;
+        }
+        .price-table tr:hover {
+            background: #fafafa;
+        }
+        .pro-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        @media (max-width: 600px) {
+            .card {
+                padding: 25px;
+            }
+            .logo h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .price-table th,
+            .price-table td {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <h1>📔 Memoir</h1>
+                <p>服务条款 | Terms of Service</p>
+            </div>
+
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="switchLang('zh'); return false;">中文</a>
+                <a href="#" onclick="switchLang('en'); return false;">English</a>
+            </div>
+
+            <!-- 中文版本 -->
+            <div id="zh" class="section active">
+                <p><strong>生效日期：2025年1月</strong></p>
+                <p><strong>最后更新：2025年1月</strong></p>
+
+                <p>欢迎使用 Memoir（以下简称"本应用"）。请在使用本应用前仔细阅读以下服务条款。下载、安装或使用本应用即表示您同意接受这些条款的约束。</p>
+
+                <h2>一、服务概述</h2>
+                <p>Memoir 是一款 iOS 日记应用，提供以下功能：</p>
+                <ul>
+                    <li>文字、照片、录音日记记录</li>
+                    <li>语音转文字功能</li>
+                    <li>日历视图与全文搜索</li>
+                    <li>Face ID / Touch ID 隐私保护</li>
+                </ul>
+                <p>本应用提供免费版和 Pro 订阅版两种使用方式。</p>
+
+                <h2>二、用户账户</h2>
+                <ul>
+                    <li>无需注册账号即可使用基础功能</li>
+                    <li>日记数据默认存储在您的设备本地</li>
+                    <li>iCloud 同步功能需要 Apple ID（Pro 功能）</li>
+                </ul>
+
+                <h2>三、Pro 订阅服务</h2>
+
+                <h3>3.1 订阅选项</h3>
+                <table class="price-table">
+                    <tr>
+                        <th>类型</th>
+                        <th>价格</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>月度订阅</td>
+                        <td>¥8/月</td>
+                        <td>按月自动续费</td>
+                    </tr>
+                    <tr>
+                        <td>永久买断</td>
+                        <td>¥68</td>
+                        <td>一次性付款，永久使用</td>
+                    </tr>
+                </table>
+
+                <h3>3.2 Pro 功能 <span class="pro-badge">PRO</span></h3>
+                <ul>
+                    <li>AI 日记智能总结</li>
+                    <li>iCloud 云端同步</li>
+                    <li>数据导出功能</li>
+                </ul>
+
+                <h3>3.3 免费试用</h3>
+                <div class="highlight">
+                    新用户享有 <strong>7 天免费试用期</strong>，试用期内可体验全部 Pro 功能。试用期结束后自动降级为免费版，<strong>不会自动扣费</strong>。
+                </div>
+
+                <h3>3.4 订阅条款</h3>
+                <ul>
+                    <li>月度订阅将自动续费，除非在当前订阅期结束前至少 24 小时关闭自动续费</li>
+                    <li>费用将通过您的 Apple ID 账户收取</li>
+                    <li>订阅可在 iOS「设置 > Apple ID > 订阅」中管理和取消</li>
+                    <li>取消订阅后，您仍可使用至当前订阅期结束</li>
+                    <li>购买订阅后，未使用的免费试用期部分将被取消</li>
+                </ul>
+
+                <h2>四、用户内容</h2>
+                <ul>
+                    <li>您对创建的日记内容拥有完全所有权</li>
+                    <li>我们不会访问、读取或分享您的日记内容</li>
+                    <li>AI 总结功能通过第三方 API 处理文本，但不会存储您的内容</li>
+                    <li>您有责任定期备份重要数据</li>
+                </ul>
+
+                <h2>五、数据存储与隐私</h2>
+                <ul>
+                    <li>日记数据默认存储在您的设备本地</li>
+                    <li>iCloud 同步数据存储在您的个人 iCloud 账户中</li>
+                    <li>我们不在自己的服务器上存储您的任何日记内容</li>
+                    <li>详细隐私信息请参阅我们的<a href="privacy.html">隐私政策</a></li>
+                </ul>
+
+                <h2>六、禁止行为</h2>
+                <p>用户不得将本应用用于：</p>
+                <ul>
+                    <li>任何违反法律法规的目的</li>
+                    <li>存储或传播非法内容</li>
+                    <li>试图破解、逆向工程或干扰应用正常运行</li>
+                </ul>
+
+                <h2>七、免责声明</h2>
+                <p>应用按"现状"提供，不提供任何明示或暗示的保证。我们不对以下情况负责：</p>
+                <ul>
+                    <li>因设备丢失或损坏导致的数据丢失</li>
+                    <li>iCloud 同步失败导致的数据不一致</li>
+                    <li>第三方服务（如 AI 总结）不可用或错误</li>
+                    <li>任何间接、偶然或特殊损失</li>
+                </ul>
+
+                <h2>八、服务变更与终止</h2>
+                <ul>
+                    <li>我们保留修改、暂停或终止服务的权利</li>
+                    <li>订阅价格如有变动，将在续费前通知用户</li>
+                    <li>重大条款变更将通过 App 内通知或邮件告知</li>
+                </ul>
+
+                <h2>九、退款政策</h2>
+                <div class="highlight">
+                    所有购买通过 Apple App Store 处理。如需退款，请通过 Apple 官方渠道提交申请：<br>
+                    <a href="https://reportaproblem.apple.com" target="_blank">https://reportaproblem.apple.com</a>
+                </div>
+
+                <h2>十、知识产权</h2>
+                <ul>
+                    <li>Memoir 应用及其所有内容、功能的知识产权归开发者所有</li>
+                    <li>用户创建的日记内容归用户所有</li>
+                </ul>
+
+                <h2>十一、适用法律</h2>
+                <p>本服务条款受中华人民共和国法律管辖。因本条款产生的任何争议，应首先通过友好协商解决；协商不成的，双方同意提交开发者所在地有管辖权的法院诉讼解决。</p>
+
+                <h2>十二、联系我们</h2>
+                <p>如果您对本服务条款有任何疑问，请通过以下方式联系我们：</p>
+                <div class="contact-info">
+                    <p>📧 邮箱：sutgouc@gmail.com</p>
+                    <p>💬 技术支持：<a href="support.html">技术支持页面</a></p>
+                </div>
+            </div>
+
+            <!-- English Version -->
+            <div id="en" class="section">
+                <p><strong>Effective Date: January 2025</strong></p>
+                <p><strong>Last Updated: January 2025</strong></p>
+
+                <p>Welcome to Memoir (hereinafter referred to as "the App"). Please read the following Terms of Service carefully before using this App. By downloading, installing, or using this App, you agree to be bound by these terms.</p>
+
+                <h2>1. Service Overview</h2>
+                <p>Memoir is an iOS journaling app that provides the following features:</p>
+                <ul>
+                    <li>Text, photo, and audio journal recording</li>
+                    <li>Speech-to-text functionality</li>
+                    <li>Calendar view and full-text search</li>
+                    <li>Face ID / Touch ID privacy protection</li>
+                </ul>
+                <p>The App offers both a free version and a Pro subscription version.</p>
+
+                <h2>2. User Account</h2>
+                <ul>
+                    <li>No account registration required for basic features</li>
+                    <li>Journal data is stored locally on your device by default</li>
+                    <li>iCloud sync requires an Apple ID (Pro feature)</li>
+                </ul>
+
+                <h2>3. Pro Subscription</h2>
+
+                <h3>3.1 Subscription Options</h3>
+                <table class="price-table">
+                    <tr>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Monthly</td>
+                        <td>¥8/month</td>
+                        <td>Auto-renews monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Lifetime</td>
+                        <td>¥68</td>
+                        <td>One-time payment, permanent access</td>
+                    </tr>
+                </table>
+
+                <h3>3.2 Pro Features <span class="pro-badge">PRO</span></h3>
+                <ul>
+                    <li>AI-powered journal summaries</li>
+                    <li>iCloud sync</li>
+                    <li>Data export</li>
+                </ul>
+
+                <h3>3.3 Free Trial</h3>
+                <div class="highlight">
+                    New users enjoy a <strong>7-day free trial</strong> with full access to all Pro features. After the trial ends, you'll automatically be downgraded to the free version. <strong>No automatic charges.</strong>
+                </div>
+
+                <h3>3.4 Subscription Terms</h3>
+                <ul>
+                    <li>Monthly subscriptions auto-renew unless canceled at least 24 hours before the end of the current period</li>
+                    <li>Payment will be charged to your Apple ID account</li>
+                    <li>Manage or cancel subscriptions in iOS Settings > Apple ID > Subscriptions</li>
+                    <li>After cancellation, you can continue using Pro features until the end of the current billing period</li>
+                    <li>Any unused portion of a free trial will be forfeited when purchasing a subscription</li>
+                </ul>
+
+                <h2>4. User Content</h2>
+                <ul>
+                    <li>You retain full ownership of your journal content</li>
+                    <li>We do not access, read, or share your journal content</li>
+                    <li>AI summary feature processes text through third-party APIs but does not store your content</li>
+                    <li>You are responsible for regularly backing up important data</li>
+                </ul>
+
+                <h2>5. Data Storage & Privacy</h2>
+                <ul>
+                    <li>Journal data is stored locally on your device by default</li>
+                    <li>iCloud sync data is stored in your personal iCloud account</li>
+                    <li>We do not store any of your journal content on our servers</li>
+                    <li>For detailed privacy information, please refer to our <a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+
+                <h2>6. Prohibited Conduct</h2>
+                <p>Users shall not use this App for:</p>
+                <ul>
+                    <li>Any purpose that violates laws or regulations</li>
+                    <li>Storing or distributing illegal content</li>
+                    <li>Attempting to crack, reverse engineer, or interfere with the App's normal operation</li>
+                </ul>
+
+                <h2>7. Disclaimer</h2>
+                <p>The App is provided "as is" without any express or implied warranties. We are not responsible for:</p>
+                <ul>
+                    <li>Data loss due to device loss or damage</li>
+                    <li>Data inconsistencies caused by iCloud sync failures</li>
+                    <li>Unavailability or errors of third-party services (such as AI summaries)</li>
+                    <li>Any indirect, incidental, or special damages</li>
+                </ul>
+
+                <h2>8. Service Changes & Termination</h2>
+                <ul>
+                    <li>We reserve the right to modify, suspend, or terminate the service</li>
+                    <li>Users will be notified of subscription price changes before renewal</li>
+                    <li>Significant terms changes will be communicated via in-app notifications or email</li>
+                </ul>
+
+                <h2>9. Refund Policy</h2>
+                <div class="highlight">
+                    All purchases are processed through the Apple App Store. For refund requests, please submit through Apple's official channel:<br>
+                    <a href="https://reportaproblem.apple.com" target="_blank">https://reportaproblem.apple.com</a>
+                </div>
+
+                <h2>10. Intellectual Property</h2>
+                <ul>
+                    <li>All intellectual property rights in Memoir and its content belong to the developer</li>
+                    <li>Journal content created by users belongs to the users</li>
+                </ul>
+
+                <h2>11. Governing Law</h2>
+                <p>These Terms of Service are governed by the laws of the People's Republic of China. Any disputes arising from these terms shall first be resolved through friendly negotiation; if negotiation fails, both parties agree to submit to the jurisdiction of the courts where the developer is located.</p>
+
+                <h2>12. Contact Us</h2>
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+                <div class="contact-info">
+                    <p>📧 Email: sutgouc@gmail.com</p>
+                    <p>💬 Support: <a href="support.html">Support Page</a></p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>© 2025 Memoir. All rights reserved.</p>
+                <p>Made with ❤️ for journaling lovers</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById(lang).classList.add('active');
+
+            document.querySelectorAll('.lang-switch a').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Auto-detect language
+        (function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang && !userLang.startsWith('zh')) {
+                switchLang('en');
+            }
+        })();
+    </script>
+</body>
+</html>
